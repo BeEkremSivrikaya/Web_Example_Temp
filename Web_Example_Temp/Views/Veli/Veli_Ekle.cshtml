@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "Veli_Ekle";
+}
+
+
+<h1>Veli_Ekle</h1>
+
+
+@model Veli
+<form asp-controller="Veli" asp-action="Veli_Ekle" method="post">
+    <div class="form-group mb-3">
+        <label asp-for="Ad" class="control-label"></label>
+        <input asp-for="Ad" class="form-control" />
+        <span asp-validation-for="Ad" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="Soyad" class="control-label"></label>
+        <input asp-for="Soyad" class="form-control" />
+        <span asp-validation-for="Soyad" class="text-danger"></span>
+    </div>
+
+
+
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>
+

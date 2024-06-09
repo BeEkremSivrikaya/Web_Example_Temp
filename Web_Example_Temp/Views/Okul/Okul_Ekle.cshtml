@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "Okul_Ekle";
+}
+
+
+<h1>Okul_Ekle</h1>
+
+
+@model Okul
+<form asp-controller="Okul" asp-action="Okul_Ekle" method="post">
+    <div class="form-group mb-3">
+        <label asp-for="Ad" class="control-label"></label>
+        <input asp-for="Ad" class="form-control" />
+        <span asp-validation-for="Ad" class="text-danger"></span>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>
+
+

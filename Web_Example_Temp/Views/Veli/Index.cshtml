@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+@model List<Veli>
+<h1 class="mb-5">Veliler</h1>
+
+<table class="table table-bordered table-striped text-center mt-5">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Ad</th>
+            <th>Soyad</th>
+            <th>Düzenle</th>
+            <th>Sil</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var veli in Model)
+        {
+            <tr>
+                <td>@veli.Id</td>
+                <td>@veli.Ad</td>
+                <td>@veli.Soyad</td>
+                <td>
+                    <a asp-controller="Veli" asp-action="Veli_Güncelle" asp-route-id="@veli.Id" class="btn btn-warning">Düzenle</a>
+                </td>
+                <td>
+                    <a asp-controller="Veli" asp-action="Veli_Sil" asp-route-id="@veli.Id" class="btn btn-danger">Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
